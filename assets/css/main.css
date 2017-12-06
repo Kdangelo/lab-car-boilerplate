@@ -1,6 +1,6 @@
 /* header format */
 header {
-	background-image: url(../assets/images/taxi.jpg);
+	background-image: url(../../assets/images/taxi.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
   background-clip: border-box;
@@ -25,6 +25,9 @@ header {
 }
 .travel {
 	margin: 0;
+}
+.signUp img {
+  margin-left: 4%;
 }
 .textTravels::after, .textTravels::before{
   content: " ";
@@ -66,7 +69,7 @@ header {
 
 /* driver section format */
 .driver {
-  background-image: url(../assets/images/conduce.jpg);
+  background-image: url(../../assets/images/conduce.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;  
