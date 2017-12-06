@@ -1,1 +1,163 @@
-/* Los estilos de tu proyecto */
+/* header format */
+header {
+	background-image: url(../assets/images/taxi.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-clip: border-box;
+	background-position: bottom;
+}
+header {
+	padding: 15% 0;
+}
+.navbarLabcar {
+	background-color: #fff;
+	border: none;
+	border-radius: 0%;
+	padding: 2%;
+}
+.signUp {
+	background-color: #FFBF00;
+	color: #fff;
+	padding: 3%;
+}
+.owner {
+	margin: 0;
+}
+.travel {
+	margin: 0;
+}
+.textTravels::after, .textTravels::before{
+  content: " ";
+  display: inline-block;
+  width: 20%;
+  height: 0.1em;
+  background-color: #FFFFFF ;
+  margin: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+/* downloadApp section format */ 
+.downloadApp {
+  background-color: #FFBF00;
+  padding: 5% 0;
+}
+.app {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 2% 4%;
+}
+.phone img {
+ width: 70%;
+}
+.textApp {
+  color: #fff;
+}
+.newTitleApp {
+  color: #FFF;
+  text-align: center;
+}
+.newTextApp {
+  color: #FFF;
+}
+
+/* driver section format */
+.driver {
+  background-image: url(../assets/images/conduce.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+.textDriver {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20% 10% 70% 10%;
+}
+.btn-driver {
+  color: #fff;
+  background: #FFBF00;
+}
+.colDriver {
+  padding-right: 0;
+}
+
+/* format section rate */
+.rates {
+  background-color: #FFBF00;
+  color: #fff;
+}
+.ratesDiv {
+  margin: 5% 0;
+}
+.ratesTitle p {
+  padding-top: 2%; 
+  margin-bottom: 7%;
+}
+.input {
+  padding: 1.5% 20% 1.5% 2%;
+  margin-left: 4%;
+  background-color: transparent;
+  border-style: none;
+  border: 1px solid white;
+  border-radius: 5%;
+}
+.input::placeholder {
+  color: #fff;
+}
+.destination {
+  margin-top: 5%;
+}
+.btn-driver-2 {
+  background-color: #fff;
+  color: black;
+  margin-left: 20%;
+  margin-top: 7%;
+}
+.maps {
+  width: 450px;
+  height: 400px;
+  border: 1px solid white;
+  margin: 10% 0;
+}
+.maps2 {
+  padding: 2%;
+}
+
+/* footer format */
+.footer {
+  background-color: #2D2D2D;
+  color: #B4B0AA;
+  padding-top: 5%;
+}
+.imgFooter {
+  padding-bottom: 2%;
+  border-bottom: 1px solid #B4B0AA;
+}
+.iconFooter {
+  margin-top: 28%;
+  margin-bottom: 1.5%;
+}
+.listFooter {
+  padding-top: 3%;
+}
+.listFooter ul li {
+  padding: 3% 0;
+}
+.listFooter ul li a {
+  color: #B4B0AA;
+}
+.copyFooter {
+  border-top: 1px solid #B4B0AA;
+  padding-top: 2%;
+  padding-left: 0;
+  margin-bottom: 6%;
+}
+.storeFooter {
+  padding-top: 15%;
+}
+.storeFooter img {
+  padding: 5% 0;
+}

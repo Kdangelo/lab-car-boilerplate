@@ -1,0 +1,39 @@
+@media (max-width: 767px) {
+	header {
+		padding: 40% 0;
+	}
+	.btn-visible {
+		margin-top: 5%;
+	}
+  .app {
+    border: 1px solid #fff;
+    margin: 4%;
+  }
+  .app .phone img {
+    margin: 7% 0 7% 12%;
+  }
+  .newTextApp {
+    margin: 0;
+  }
+  .driver {
+    background-position: bottom;
+  }
+  .colDriver {
+    padding: 0;
+  }
+  .textDriver {
+    padding: 20% 10% 35% 10%;
+  }
+  .storeFooter2 {
+    margin: 5% 0 10% 0;
+  }
+  .appstore {
+    margin: 20% 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .maps {
+    width: 360px;
+    height: 310px;
+  }
+}
