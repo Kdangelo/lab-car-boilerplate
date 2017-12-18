@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Lab-car</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="assets/css/media.css">
 </head>
@@ -30,12 +33,28 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Viaja</a></li>
           <li><a href="#">Conduce</a></li>
-          <li><a href="#">Inicia sesión</a></li>
+          <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Inicia sesión</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
 
     </div><!-- /.container-fluid -->
   </nav>
+  <!-- login modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="loginmodal-container">
+        <h1>Login to Your Account</h1><br>
+        <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+        </form>
+        <div class="login-help">
+        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="container-fluid">
@@ -44,12 +63,85 @@
           <h2 class="travel">Disfruta del viaje</h2>
           <h2 class="owner">Eres dueño de tu tiempo</h2>
           <h4>Viaja con <img src="assets/images/logoBlanco.png"></h4>
-          <button class="btn btn-default" type="submit">REGÍSTRATE</button>
+          <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#becomeamember">REGÍSTRATE</button>
           <p class="textTravels">O bién</p>
-          <button class="btn btn-default" type="submit">Conviértete en un conductor</button>
+          <button class="btn btn-default " type="submit">Conviértete en un conductor</button>
         </div>
       </div>
     </div>
+    <!-- register modal -->
+    <form action="#" method="post" id="newmember" >
+      <div class="modal fade" id="becomeamember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">ya tienes una cuenta?</h4>
+              <h5>o crea una cuenta nueva</h5>
+            </div>
+            <div class="modal-body form-inline">
+              <div class="form-group has-feedback">
+                <label class="control-label" for="firstnamelabel">* Nombre</label>
+                <input type="text" class="form-control" id="firstnameinput" aria-describedby="firstnameinput" required="">
+              </div>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="lastnamelabel">* Apellido</label>
+                <input type="text" class="form-control" id="lastnameinput" aria-describedby="lastnameinput" required="">
+              </div>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="emaillabel">* Correo electrónico</label>
+                <input type="email" class="form-control" id="emailinput" aria-describedby="emailinput" placeholder="ejemplo@correo.cl" required="">
+              </div>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="passwordlabel">* Teléfono</label>
+                <input type="password" class="form-control" id="passwordinput" aria-describedby="passwordinput" required="">
+              </div>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="re-enterpasswordlabel">* Contraseña</label>
+                <input type="password" class="form-control" id="re-enterpasswordinput" aria-describedby="re-enterpasswordinput" required="">
+              </div>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="postcodelabel">* Ciudad</label>
+                <input type="text" class="form-control" id="postcodeinput" aria-describedby="postcodeinput">
+              </div>
+
+              <div class="form-group has-feedback">
+                <label class="control-label" for="postcodelabel">Código de invitación</label>
+                <input type="text" class="form-control" id="postcodeinput" placeholder="opcional" aria-describedby="postcodeinput">
+              </div>
+              
+               <div class="form-group">
+                  <label class="control-label" for="postcodelabel">¿cómo te enteraste de nosotros?</label>
+                  <select class="form-control">
+                    <option>- por favor selecciona -</option>
+                    <option>Search engine</option>
+                    <option>Web Advertisement</option>
+                    <option>Magazine Advertisement</option>
+                    <option>Friend/Colleague</option>
+                    <option>Email newsletter</option>
+                    <option>Fax</option>
+                    <option>Conference/Tradeshow</option>
+                    <option>Social Media</option>
+                    <option>Other</option>
+                  </select>
+              </div><br/>
+              
+               <div class="form-group">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+               </div>
+              
+            </div><!-- end modal -->
+          </div>
+        </div>
+      </div><!-- end become a member modal -->
+    </form> <!-- end Form -->
+      
+
     <!-- phones visible -->
     <div class="container-fluid">
       <div class="row">
@@ -96,12 +188,85 @@
           <div class="textDriver">
             <h3>Conduce cuando quieras</h3>
             <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
-            <button class="btn btn-default btn-driver" type="submit">Conviértete en conductor</button>
+            <button class="btn btn-default btn-driver" data-toggle="modal" data-target="#login" type="submit">Conviértete en conductor</button>
           </div>
         </div>
       </div> 
+    </div> 
 
-    </div>  
+    <form id="logingform" action="/" method="post">
+      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="control-label" for="postcodelabel">¿Tienes vehículo de 4 puertas?</label>
+                <select class="form-control">
+                  <option>- por favor selecciona -</option>
+                  <option>Sí</option>
+                  <option>No</option>
+                </select>
+              </div><br/>
+
+              <div class="form-group">
+                <label class="control-label" for="postcodelabel">Marca</label>
+                <select class="form-control" aria-placeholder="Elige la marca del vehíclo">
+                  <option>- por favor selecciona -</option>
+                  <option>Toyota</option>
+                  <option>Subaru</option>
+                  <option>Kia</option>
+                  <option>Hyunday</option>
+                  <option>Nissan</option>
+                  <option>Chevrolet</option>
+                </select>
+                <p>¿No ves tú vehículo en la lista?</p>
+                <a href="#">sociosmdv@uber.com</a>  
+              </div><br/>
+
+              <div class="form-group">
+                <label class="control-label" for="postcodelabel">Modelo</label>
+                <select class="form-control">
+                  <option>- por favor selecciona -</option>
+                  <option>Modelo 1</option>
+                  <option>Modelo 2</option>
+                  <option>Modelo 3</option>
+                  <option>Modelo 4</option>
+                  <option>Modelo 5</option>
+                  <option>Modelo 6</option>
+                </select>
+              </div><br/>
+
+              <div class="form-group">
+                <label class="control-label" for="postcodelabel">Año</label>
+                <select class="form-control">
+                  <option>- por favor selecciona -</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                </select>
+              </div><br/>
+              
+              <div class="form-group has-feedback">
+                <label class="control-label" for="lastnamelabel">Número de matrícula</label>
+                <input type="text" class="form-control" id="lastnameinput" placeholder="Número de matrícula" aria-describedby="lastnameinput" required="">
+                <p>La información de la matrícula ayuda a los clientes a identificar tú vehículo</p>
+              </div>
+                            
+              <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div><!-- end become a member modal -->
+    </form> <!-- end login form -->  
+    
   </section><!-- end driver section -->
   
   <section class="rates">
@@ -207,8 +372,9 @@
     </div> <!-- container -->  
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+  		  
 </body>
 </html>
